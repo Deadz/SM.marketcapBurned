@@ -14,6 +14,7 @@ function getCardInfo()
 {
 	cardList = [];
 	let total = 0;
+	let totalBCX = 0;
 	$.ajax(
 	{
 		url: 'https://steemmonsters.com/cards/get_details/',
@@ -67,7 +68,9 @@ function getCardInfo()
 				cardList[i].supply = s;
 				i++;
 				total = total+m;
+				totalBCX = b+totalBCX;
 				$("#totalM").text("-"+new Intl.NumberFormat().format(total));
+				$("#totalBCX").text("-"+new Intl.NumberFormat().format(totalBCX));
 			});
 			showTabl(cardList);
 		}
