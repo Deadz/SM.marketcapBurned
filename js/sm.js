@@ -1,6 +1,6 @@
 $.ajax(
 {
-	url: 'https://steemmonsters.com/market/for_sale_grouped/',
+	url: 'https://game-api.splinterlands.com/market/for_sale_grouped/',
 	dataType: 'json',
 	type : 'GET',
 	success: function(datas)
@@ -17,7 +17,7 @@ function getCardInfo()
 	let totalBCX = 0;
 	$.ajax(
 	{
-		url: 'https://steemmonsters.com/cards/get_details/',
+		url: 'https://game-api.splinterlands.com/cards/get_details/',
 		dataType: 'json',
 		type : 'GET',
 		success: function(d)
